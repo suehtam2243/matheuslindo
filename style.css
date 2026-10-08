@@ -1,0 +1,750 @@
+/* =================================
+   CONFIGURAÇÕES
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f9fc;
+    color: #202538;
+    line-height: 1.6;
+    transition: 0.3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e7ee;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #6254df;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu a {
+    color: #41485c;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #6254df;
+}
+
+#modoEscuro {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #efedff;
+
+    cursor: pointer;
+
+    font-size: 17px;
+}
+
+
+/* =================================
+   INÍCIO
+================================= */
+
+.inicio {
+    max-width: 1200px;
+    min-height: 650px;
+
+    margin: auto;
+    padding: 80px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.inicio-texto {
+    max-width: 650px;
+}
+
+.subtitulo {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    background: #ebe9ff;
+
+    color: #6254df;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.inicio h1 {
+    margin: 25px 0;
+
+    font-size: 58px;
+
+    line-height: 1.08;
+}
+
+.inicio h1 span {
+    color: #6254df;
+}
+
+.inicio p {
+    color: #687187;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+
+    padding: 14px 23px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #6254df;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #4d3dcc;
+    transform: translateY(-2px);
+}
+
+.imagem-robo {
+    width: 330px;
+    height: 330px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #e8e6ff,
+        #d9f5ff
+    );
+
+    font-size: 150px;
+
+    animation: flutuar 3s infinite ease-in-out;
+}
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* =================================
+   SEÇÕES
+================================= */
+
+.secao {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 90px 25px;
+}
+
+.titulo {
+    margin-bottom: 45px;
+}
+
+.titulo span {
+    color: #6254df;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.titulo h2 {
+    margin-top: 7px;
+
+    font-size: 38px;
+}
+
+.titulo p {
+    color: #687187;
+    margin-top: 10px;
+}
+
+.centralizado {
+    text-align: center;
+}
+
+
+/* =================================
+   CONTEÚDO
+================================= */
+
+.conteudo {
+    display: grid;
+
+    grid-template-columns: 1fr 1.5fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.card {
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #e4e6ed;
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(40, 50, 80, 0.08);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #687187;
+}
+
+.principal {
+    border-top: 4px solid #6254df;
+}
+
+.icone {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.texto p {
+    color: #687187;
+
+    margin-bottom: 20px;
+}
+
+.alerta {
+    padding: 18px;
+
+    background: #eeecff;
+
+    border-left: 4px solid #6254df;
+
+    border-radius: 8px;
+}
+
+
+/* =================================
+   FUNDO
+================================= */
+
+.fundo {
+    max-width: none;
+
+    padding-left:
+        max(25px, calc((100% - 1150px) / 2));
+
+    padding-right:
+        max(25px, calc((100% - 1150px) / 2));
+
+    background: #f0f1ff;
+}
+
+
+/* =================================
+   CARDS
+================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =================================
+   BENEFÍCIOS
+================================= */
+
+.lista-beneficios {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.lista-beneficios > div {
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background: white;
+
+    border: 1px solid #e4e6ed;
+}
+
+.lista-beneficios strong {
+    display: inline-flex;
+
+    width: 35px;
+    height: 35px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dff7e7;
+
+    color: #199447;
+
+    margin-bottom: 15px;
+}
+
+.lista-beneficios p {
+    color: #687187;
+}
+
+
+/* =================================
+   RISCOS
+================================= */
+
+.riscos {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.risco {
+    display: flex;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #e4e6ed;
+
+    border-radius: 15px;
+}
+
+.risco > span {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eeecff;
+
+    color: #6254df;
+
+    font-weight: bold;
+}
+
+.risco p {
+    color: #687187;
+}
+
+
+/* =================================
+   ÉTICA
+================================= */
+
+.etica {
+    padding: 90px 25px;
+
+    background: #171c2c;
+
+    color: white;
+}
+
+.etica .titulo p {
+    color: #adb4c7;
+}
+
+.etica-cards {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.etica-cards > div {
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background: #23293a;
+
+    border: 1px solid #343b4e;
+}
+
+.etica-cards > div > div {
+    font-size: 32px;
+}
+
+.etica-cards h3 {
+    margin: 15px 0 8px;
+}
+
+.etica-cards p {
+    color: #adb4c7;
+}
+
+
+/* =================================
+   REFLEXÃO
+================================= */
+
+.reflexao {
+    padding: 80px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6254df,
+            #887ae8
+        );
+
+    color: white;
+}
+
+.reflexao h2 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.reflexao p {
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #e7e4ff;
+}
+
+
+/* =================================
+   QUIZ
+================================= */
+
+.quiz {
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid #e2e5ed;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(30, 40, 70, 0.07);
+}
+
+#pergunta {
+    margin-bottom: 25px;
+}
+
+#opcoes {
+    display: grid;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.opcao {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 2px solid #e0e3eb;
+
+    border-radius: 10px;
+
+    background: white;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.opcao:hover {
+    border-color: #6254df;
+
+    background: #f0eeff;
+}
+
+.opcao.correta {
+    background: #d7f6df;
+
+    border-color: #28a553;
+}
+
+.opcao.errada {
+    background: #ffdcdc;
+
+    border-color: #d64545;
+}
+
+#resultado {
+    margin-top: 20px;
+
+    font-weight: bold;
+}
+
+
+/* =================================
+   RODAPÉ
+================================= */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #101421;
+
+    color: #969eb0;
+}
+
+footer h3 {
+    color: white;
+
+    margin-bottom: 8px;
+}
+
+
+/* =================================
+   MODO ESCURO
+================================= */
+
+body.escuro {
+    background: #101421;
+
+    color: white;
+}
+
+body.escuro header {
+    background: #171c2c;
+
+    border-color: #30374a;
+}
+
+body.escuro .menu a {
+    color: #e1e4ec;
+}
+
+body.escuro .inicio p,
+body.escuro .texto p,
+body.escuro .card p,
+body.escuro .lista-beneficios p,
+body.escuro .risco p {
+    color: #adb5c8;
+}
+
+body.escuro .card,
+body.escuro .lista-beneficios > div,
+body.escuro .risco,
+body.escuro .quiz {
+    background: #1b2130;
+
+    border-color: #30374a;
+}
+
+body.escuro .fundo {
+    background: #151a28;
+}
+
+body.escuro .opcao {
+    background: #1b2130;
+
+    color: white;
+
+    border-color: #343b4e;
+}
+
+body.escuro .alerta {
+    background: #25203f;
+}
+
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 950px) {
+
+    .menu {
+        display: none;
+    }
+
+    .inicio {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .inicio-texto {
+        max-width: 700px;
+    }
+
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lista-beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    .etica-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .riscos {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .inicio h1 {
+        font-size: 40px;
+    }
+
+    .imagem-robo {
+        width: 230px;
+        height: 230px;
+
+        font-size: 100px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo h2 {
+        font-size: 30px;
+    }
+
+    .reflexao h2 {
+        font-size: 30px;
+    }
+
+    .quiz {
+        padding: 25px 18px;
+    }
+
+}
